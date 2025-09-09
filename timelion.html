@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H</title>
+    <title>李倢安的冒險年表</title>
     <style>
         /* 重置樣式 */
         * {
@@ -358,3 +358,151 @@
         .timeline-event:nth-child(3) { animation-delay: 0.3s; }
     </style>
 </head>
+<body>
+    <header class="header">
+        <div class="logo">Joan Lee</div>
+        <nav class="nav">
+            <a href="#" class="nav-item">
+                <span class="nav-icon"></span>
+                Home 
+            </a>
+            <a href="about.html" class="nav-item">
+                <span class="nav-icon"></span>
+                About Me 
+            </a>
+            <a href="timelion.html" class="nav-item">
+                <span class="nav-icon"></span>
+                Timeline 
+            </a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="hero-section">
+            <h1 class="main-title">人生探險歷程</h1>
+            <p class="subtitle">Life was like a box of chocolates. You never know what you are gonna get.
+                --Forrest Gump</p>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">全部 <span class="count"></span></button>
+                <button class="filter-btn" data-category="學業">學業 <span class="count"></span></button>
+                <button class="filter-btn" data-category="工作經歷">工作經歷 <span class="count"></span></button>
+                <button class="filter-btn" data-category="技術/學習">技術/學習 <span class="count"></span></button>
+                <button class="filter-btn" data-category="日常">日常 <span class="count"></span></button>
+            </div>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            <div id="timeline-events" class="timeline-events">
+                <!-- 時間軸事件將由 JavaScript 動態生成 -->
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // 時間軸事件資料
+        const timelineEvents = [
+            {
+                year: 2004,
+                title: "誕生",
+                description: "我來到這個世界，故事開始。",
+                category: "學業",
+                date: "JAN 01 2004"
+            },
+            {
+                year: 2023,
+                title: "北上台北",
+                description: "離鄉背井，踏上新大地，開啟挑戰。",
+                category: "工作經歷",
+                date: "SEP 01 2023"
+            },
+            {
+                year: 2025,
+                title: "暑期實習",
+                description: "加入 CAE 專案，探索永續校園與數位雙生。",
+                category: "技術/學習",
+                date: "JUL 01 2025"
+            }
+        ];
+
+        // 建立時間軸事件卡片的 HTML
+        function createTimelineEventHTML(event) {
+            return `
+                <div class="timeline-event">
+                    <div class="event-header">
+                        <div>
+                            <div class="timeline-year">${event.year}</div>
+                            <div class="timeline-title">${event.title}</div>
+                        </div>
+                    </div>
+                    <div class="timeline-description">${event.description}</div>
+                    <div class="event-date">
+                        <div class="day">${event.date.split(' ')[1]}</div>
+                        <div>${event.date.split(' ')[0]} ${event.date.split(' ')[2]}</div>
+                    </div>
+                    <div class="event-category">${event.category}</div>
+                </div>
+            `;
+        }
+
+        // 渲染時間軸
+        function renderTimeline() {
+            const timelineContainer = document.getElementById('timeline-events');
+            
+            if (!timelineContainer) {
+                console.error('找不到時間軸容器元素');
+                return;
+            }
+            
+            // 清空現有內容
+            timelineContainer.innerHTML = '';
+            
+            // 按年份排序事件（從舊到新）
+            const sortedEvents = [...timelineEvents].sort((a, b) => a.year - b.year);
+            
+            // 渲染每個事件
+            sortedEvents.forEach(event => {
+                const eventHTML = createTimelineEventHTML(event);
+                timelineContainer.insertAdjacentHTML('beforeend', eventHTML);
+            });
+
+            // 重新計算並更新篩選按鈕數量
+            updateFilterCounts();
+        }
+
+        // 更新篩選按鈕上的數量
+        function updateFilterCounts() {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const counts = timelineEvents.reduce((acc, ev) => {
+                acc.all += 1;
+                acc[ev.category] = (acc[ev.category] || 0) + 1;
+                return acc;
+            }, { all: 0 });
+
+            buttons.forEach(btn => {
+                const category = btn.getAttribute('data-category');
+                const countSpan = btn.querySelector('.count');
+                if (!countSpan) return;
+                const value = category === 'all' ? counts.all : (counts[category] || 0);
+                countSpan.textContent = String(value);
+            });
+        }
+
+        // 初始化應用程式
+        function initApp() {
+            console.log('李倢安的冒險年表應用程式啟動中...');
+            renderTimeline();
+            console.log('時間軸渲染完成！');
+        }
+
+        // 等待 DOM 載入完成後啟動
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initApp);
+        } else {
+            initApp();
+        }
+    </script>
+</body>
+</html>
+
