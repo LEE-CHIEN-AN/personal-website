@@ -366,7 +366,7 @@
                 <span class="nav-icon">🏠</span>
                 首頁
             </a>
-            <a href="#" class="nav-item">
+            <a href="about.html" class="nav-item">
                 <span class="nav-icon">👤</span>
                 關於
             </a>
@@ -385,14 +385,16 @@
 
     <main class="main-content">
         <div class="hero-section">
-            <h1 class="main-title">我的人生旅程</h1>
-            <p class="subtitle">「人生如逆旅，我亦是行人。」— 蘇軾《臨江仙·送錢穆父》</p>
+            <h1 class="main-title">人生探險歷程</h1>
+            <p class="subtitle">Life was like a box of chocolates. You never know what you’re gonna get.
+                --Forrest Gump</p>
             
             <div class="filter-buttons">
-                <button class="filter-btn active">全部 3</button>
-                <button class="filter-btn">學業 1</button>
-                <button class="filter-btn">工作經歷 1</button>
-                <button class="filter-btn">技術/學習 1</button>
+                <button class="filter-btn active" data-category="all">全部 <span class="count"></span></button>
+                <button class="filter-btn" data-category="學業">學業 <span class="count"></span></button>
+                <button class="filter-btn" data-category="工作經歷">工作經歷 <span class="count"></span></button>
+                <button class="filter-btn" data-category="技術/學習">技術/學習 <span class="count"></span></button>
+                <button class="filter-btn" data-category="日常">日常 <span class="count"></span></button>
             </div>
         </div>
 
@@ -469,6 +471,27 @@
             sortedEvents.forEach(event => {
                 const eventHTML = createTimelineEventHTML(event);
                 timelineContainer.insertAdjacentHTML('beforeend', eventHTML);
+            });
+
+            // 重新計算並更新篩選按鈕數量
+            updateFilterCounts();
+        }
+
+        // 更新篩選按鈕上的數量
+        function updateFilterCounts() {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const counts = timelineEvents.reduce((acc, ev) => {
+                acc.all += 1;
+                acc[ev.category] = (acc[ev.category] || 0) + 1;
+                return acc;
+            }, { all: 0 });
+
+            buttons.forEach(btn => {
+                const category = btn.getAttribute('data-category');
+                const countSpan = btn.querySelector('.count');
+                if (!countSpan) return;
+                const value = category === 'all' ? counts.all : (counts[category] || 0);
+                countSpan.textContent = String(value);
             });
         }
 

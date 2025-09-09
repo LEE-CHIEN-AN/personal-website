@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我｜李倢安 - 線上履歷</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Microsoft JhengHei','PingFang TC','Helvetica Neue',Arial,sans-serif; 
+               background: linear-gradient(135deg, rgba(10,42,58,0.92), rgba(8,33,30,0.92)); color:#e9ecef; }
+
+        /* 共同導覽列（與首頁一致） */
+        .header {
+            background: rgba(10,42,58,0.95);
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            padding: 1rem 2rem;
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; color:#ffffff; }
+        .nav { display:flex; gap:2rem; align-items:center; }
+        .nav-item { color:#ced4da; text-decoration:none; display:flex; gap:.5rem; align-items:center; font-size:.95rem; }
+        .nav-item:hover { color:#fff; }
+        .theme-toggle, .lang-btn { background:none; border:1px solid rgba(255,255,255,.15); color:#ced4da; border-radius:6px; padding:.35rem .6rem; cursor:pointer; }
+
+        /* 內容容器 */
+        .main-content { margin-top: 84px; padding: 2rem 1rem 4rem; max-width: 1200px; margin-left:auto; margin-right:auto; display:flex; justify-content:center; }
+        .layout { display:flex; justify-content:center; width:100%; }
+        .card { background:#ffffff; color:#212529; border-radius:14px; box-shadow:0 12px 28px rgba(0,0,0,.22); }
+        .sidebar { padding: 1.5rem; position: sticky; top: 108px; height: fit-content; }
+        .content { padding: 2rem; width: min(860px, 95vw); }
+        .section-title { font-size: 1.05rem; letter-spacing:.08em; color:#343a40; margin-bottom: .75rem; font-weight:800; }
+        .item + .item { margin-top: 1rem; }
+        ul { margin-left: 1.2rem; color:#495057; }
+        li { margin:.35rem 0; }
+        .name { font-size: 2rem; font-weight: 800; color:#111827; }
+        .subtitle { color:#0d6efd; margin-top:.25rem; }
+        .avatar { width: 84px; height: 84px; border-radius: 8px; object-fit: cover; background:#e9ecef; }
+        .flex { display:flex; gap:1rem; align-items:center; }
+
+        @media (max-width: 992px) {
+            .layout { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">李倢安的冒險年表</div>
+        <nav class="nav">
+            <a href="index.html" class="nav-item">🏠 首頁</a>
+            <a href="about.html" class="nav-item">👤 關於</a>
+            <a href="index.html#" class="nav-item">⏰ 旅程</a>
+            <a href="#" class="nav-item">✉️ 聯絡</a>
+            <button class="theme-toggle">🌙</button>
+            <button class="lang-btn">中文</button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="layout">
+            <!-- 主內容 -->
+            <section class="card content">
+                <h1 style="margin-bottom:.25rem; color:#111827;">關於我（About Me）</h1>
+                <p style="color:#495057; margin-bottom:1.5rem;">Nobody knows everything, but everybody knows something.</p>
+                
+                <div class="item">
+                    <img class="avatar" alt="avatar" src="photo_me.jpg" />
+                    <div>
+                        <div class="name">李倢安</div>
+                        <div class="subtitle"> 國立臺灣大學 資訊管理學系 ｜ 輔修：土木工程學系</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="section-title">HARD SKILLS</div>
+                    <ul>
+                        <li>Python（pandas, matplotlib）</li>
+                        <li>C++、Arduino 基礎</li>
+                        <li>統計與多元迴歸分析</li>
+                        <li>AutoCAD / SketchUp / Revit</li>
+                        <li>Notion、HackMD、Google Workspace、Canva</li>
+                        <li>網路：宿舍網路管理、路由器設定</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="section-title">Work Experience</div>
+                    <ul>
+                        <li><strong>CAE 暑期實習（2025）</strong>：Wio Link 感測、Supabase、Python + Plotly + Streamlit、室內熱力圖（PMV/PPD）、CO₂/VOC 趨勢、pythermalcomfort 研究。</li>
+                        <li><strong>EAGLE 建築模型事務所（2024/12–2025/02）</strong>：依 AutoCAD 圖面製作比例模型，裁切、打磨、噴漆與組裝。</li>
+                        <li><strong>臺大女八舍網管（2024/09–迄今）</strong>：住戶註冊、路由器設定、網路異常與資安事件處理。</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="section-title">Projects</div>
+                    <ul>
+                        <li><strong>RoRobot 數學聊天機器人 APP（2024）</strong>：GPT API + Android、互動式數學解題引導，生活化例子與遊戲化元素。</li>
+                        <li><strong>Facebook 貼文互動分析（2024）</strong>：貼文類型、內容分類、月份對互動影響；多元迴歸與視覺化。</li>
+                        <li><strong>Starbucks Case Study（2024）</strong>：以管理學理論分析策略，強化「第三空間」在地化設計。</li>
+                        <li><strong>金馬獎互動劇（2023 冬）</strong>：多元文化主題互動劇，分支結局與教育引導。</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="section-title">Education</div>
+                    <ul>
+                        <li><strong>國立臺灣大學</strong>（2023 – 至今）：主修資管、輔修土木；修課含工程圖學、土木概念設計、土木基礎實作、資料結構、統計學、組織行為、程式設計。</li>
+                        <li><strong>嘉義女中 數理班</strong>（高中）。</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="section-title">About Me</div>
+                    <ul>
+                        <li>喜歡實作，樂於動手做從無到有的過程。</li>
+                        <li>熱中資訊視覺化與教育應用，期待用所學回饋家鄉。</li>
+                        <li>成長於嘉義偏鄉的新住民家庭，理解教育資源落差。</li>
+                        <li>樂於邊做邊學，熱愛羽毛球；ISTP 類型的實作派行動者。</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
+
+
