@@ -4,27 +4,488 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>李倢安的冒險年表</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 重置樣式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft JhengHei', 'PingFang TC', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+
+        /* Header 樣式 */
+        .header {
+            background: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-item:hover {
+            color: #007bff;
+        }
+
+        .nav-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #6c757d;
+        }
+
+        .lang-btn {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: #495057;
+        }
+
+        /* Main 內容區域 */
+        .main-content {
+            margin-top: 80px;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .main-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 20px;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: #495057;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        .filter-btn:hover {
+            background: #e9ecef;
+        }
+
+        .filter-btn.active:hover {
+            background: #0056b3;
+        }
+
+        /* 時間軸樣式 */
+        .timeline-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #dee2e6;
+        }
+
+        .timeline-events {
+            position: relative;
+        }
+
+        .timeline-event {
+            position: relative;
+            margin-bottom: 2rem;
+            margin-left: 100px;
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid #007bff;
+        }
+
+        .timeline-event:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .timeline-event::before {
+            content: '';
+            position: absolute;
+            left: -75px;
+            top: 1.5rem;
+            width: 12px;
+            height: 12px;
+            background: #007bff;
+            border: 3px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px #007bff;
+        }
+
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .event-category {
+            background: #007bff;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            position: absolute;
+            bottom: 1.5rem;
+            right: 1.5rem;
+        }
+
+        .timeline-year {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .timeline-description {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        .event-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-top: 1rem;
+        }
+
+        .event-date {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            text-align: right;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .day {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav {
+                gap: 1rem;
+            }
+
+            .main-content {
+                margin-top: 120px;
+                padding: 2rem 1rem;
+            }
+
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .timeline-event {
+                margin-left: 60px;
+            }
+
+            .timeline-event::before {
+                left: -45px;
+            }
+
+            .timeline-line {
+                left: 30px;
+            }
+
+            .event-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .event-date {
+                position: static;
+                text-align: left;
+                margin-top: 1rem;
+            }
+
+            .event-category {
+                position: static;
+                margin-top: 1rem;
+                align-self: flex-end;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 1.5rem;
+            }
+
+            .filter-buttons {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.4rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .timeline-event {
+                margin-left: 50px;
+                padding: 1rem;
+            }
+
+            .timeline-event::before {
+                left: -35px;
+                width: 10px;
+                height: 10px;
+            }
+
+            .timeline-line {
+                left: 20px;
+            }
+        }
+
+        /* 動畫效果 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .timeline-event {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .timeline-event:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-event:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-event:nth-child(3) { animation-delay: 0.3s; }
+    </style>
 </head>
 <body>
     <header class="header">
-        <h1 class="title">李倢安的冒險年表</h1>
-        <p class="subtitle">像主角一樣活到現在 🚀</p>
+        <div class="logo">李倢安的冒險年表</div>
+        <nav class="nav">
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                首頁
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">👤</span>
+                關於
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⏰</span>
+                旅程
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">✉️</span>
+                聯絡
+            </a>
+            <button class="theme-toggle">🌙</button>
+            <button class="lang-btn">中文</button>
+        </nav>
     </header>
 
     <main class="main-content">
+        <div class="hero-section">
+            <h1 class="main-title">我的人生旅程</h1>
+            <p class="subtitle">「人生如逆旅，我亦是行人。」— 蘇軾《臨江仙·送錢穆父》</p>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active">全部 3</button>
+                <button class="filter-btn">學業 1</button>
+                <button class="filter-btn">工作經歷 1</button>
+                <button class="filter-btn">技術/學習 1</button>
+            </div>
+        </div>
+
         <div class="timeline-container">
             <div class="timeline-line"></div>
             <div id="timeline-events" class="timeline-events">
-                <!-- 時間軸事件將由 TypeScript 動態生成 -->
+                <!-- 時間軸事件將由 JavaScript 動態生成 -->
             </div>
         </div>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 Li Jie-An</p>
-    </footer>
+    <script>
+        // 時間軸事件資料
+        const timelineEvents = [
+            {
+                year: 2004,
+                title: "誕生",
+                description: "我來到這個世界，故事開始。",
+                category: "學業",
+                date: "JAN 01 2004"
+            },
+            {
+                year: 2023,
+                title: "北上台北",
+                description: "離鄉背井，踏上新大地，開啟挑戰。",
+                category: "工作經歷",
+                date: "SEP 01 2023"
+            },
+            {
+                year: 2025,
+                title: "暑期實習",
+                description: "加入 CAE 專案，探索永續校園與數位雙生。",
+                category: "技術/學習",
+                date: "JUL 01 2025"
+            }
+        ];
 
-    <script type="module" src="dist/main.js"></script>
+        // 建立時間軸事件卡片的 HTML
+        function createTimelineEventHTML(event) {
+            return `
+                <div class="timeline-event">
+                    <div class="event-header">
+                        <div>
+                            <div class="timeline-year">${event.year}</div>
+                            <div class="timeline-title">${event.title}</div>
+                        </div>
+                    </div>
+                    <div class="timeline-description">${event.description}</div>
+                    <div class="event-date">
+                        <div class="day">${event.date.split(' ')[1]}</div>
+                        <div>${event.date.split(' ')[0]} ${event.date.split(' ')[2]}</div>
+                    </div>
+                    <div class="event-category">${event.category}</div>
+                </div>
+            `;
+        }
+
+        // 渲染時間軸
+        function renderTimeline() {
+            const timelineContainer = document.getElementById('timeline-events');
+            
+            if (!timelineContainer) {
+                console.error('找不到時間軸容器元素');
+                return;
+            }
+            
+            // 清空現有內容
+            timelineContainer.innerHTML = '';
+            
+            // 按年份排序事件（從舊到新）
+            const sortedEvents = [...timelineEvents].sort((a, b) => a.year - b.year);
+            
+            // 渲染每個事件
+            sortedEvents.forEach(event => {
+                const eventHTML = createTimelineEventHTML(event);
+                timelineContainer.insertAdjacentHTML('beforeend', eventHTML);
+            });
+        }
+
+        // 初始化應用程式
+        function initApp() {
+            console.log('李倢安的冒險年表應用程式啟動中...');
+            renderTimeline();
+            console.log('時間軸渲染完成！');
+        }
+
+        // 等待 DOM 載入完成後啟動
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initApp);
+        } else {
+            initApp();
+        }
+    </script>
 </body>
 </html>
+
