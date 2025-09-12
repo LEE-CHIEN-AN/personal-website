@@ -3,138 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於我｜李倢安 - 線上履歷</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Microsoft JhengHei', 'PingFang TC', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-            min-height: 100vh;
-        }
+    <title>About Me | Joan's Website</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/about.css">
 
-        /* Header 樣式 */
-        .header {
-            background: #ffffff;
-            border-bottom: 1px solid #e9ecef;
-            padding: 1rem 2rem;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        .nav {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-        .nav-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #6c757d;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-        .nav-item:hover {
-            color: #007bff;
-        }
-
-        .nav-icon {
-            width: 16px;
-            height: 16px;
-        }
-
-        .theme-toggle {
-            background: none;
-            border: none;
-            font-size: 1.2rem;
-            cursor: pointer;
-            color: #6c757d;
-        }
-
-        .lang-btn {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 6px;
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-            cursor: pointer;
-            color: #495057;
-        }
-
-        /* 內容容器 */
-        .main-content { margin-top: 84px; padding: 2rem 1rem 4rem; max-width: 1200px; margin-left:auto; margin-right:auto; }
-        .layout { display: grid; grid-template-columns: 320px 1fr; gap: 1.5rem; }
-        .card { background:#f7f2ea; color:#2E2E2E; border-radius:16px; box-shadow:0 16px 36px rgba(0,0,0,.24); }
-        .sidebar { padding: 1.5rem; position: sticky; top: 108px; height: fit-content; }
-        .content { padding: 2rem; }
-        .section-title { font-size: 1.05rem; letter-spacing:.08em; color:#1aa39a; margin-bottom: .75rem; font-weight:800; }
-        .item + .item { margin-top: 1rem; }
-        ul { margin-left: 1.2rem; color:#6C757D; }
-        li { margin:.35rem 0; }
-        .name { font-size: 2.2rem; font-weight: 900; color:#0a3d35; }
-        .subtitle { color:#495057; margin-top:.25rem; }
-        .avatar { width: 84px; height: 84px; border-radius: 8px; object-fit: cover; background:#e9ecef; }
-        .flex { display:flex; gap:1rem; align-items:center; }
-
-        /* 底線、tag 與分隔線 */
-        .underline { border-bottom: 2px solid #1aa39a; padding-bottom: .25rem; display:inline-block; }
-        .chips { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem; }
-        .chip { font-size:.85rem; color:#1f4c4a; background:#fff; border:1px solid #b08e6a; padding:.15rem .5rem; border-radius:12px; }
-        .divider { height:1px; background: linear-gradient(90deg, transparent, #1aa39a, transparent); margin: 1rem 0; }
-
-        @media (max-width: 992px) {
-            .layout { grid-template-columns: 1fr; }
-            .sidebar { position: static; }
-        }
-    </style>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">人生探索歷程</div>
-        <nav class="nav">
-            <a href="index.html" class="nav-item">
-                <span class="nav-icon"></span>
-                Home 
-            </a>
-            <a href="about.html" class="nav-item">
-                <span class="nav-icon"></span>
-                About Me 
-            </a>
-            <a href="timelion.html" class="nav-item">
-                <span class="nav-icon"></span>
-                Timeline 
-            </a>
-        </nav>
+     <header class="header">
+        <div class="header-content">
+            <div class="logo">Joan Lee</div>
+            <nav class="nav">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Home 
+                </a>
+                <a href="about.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    About Me 
+                </a>
+                <a href="timeline.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Timeline 
+                </a>
+                <a href="contact.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Contact 
+                </a>
+            </nav>
+        </div>
     </header>
+
 
     <main class="main-content">
         <div class="layout">
             <!-- 左側：個人資訊 / Skills / Links -->
             <aside class="card sidebar">
                 <div class="flex item">
-                    <img class="avatar" alt="avatar" src="B12705041.jpg" />
+                    <img class="avatar" alt="avatar" src="assets/img/B12705041.jpg" />
                     <div>
                         <div class="name">李倢安</div>
-                        <div class="subtitle"> 國立臺灣大學 資訊管理學系 大三 ｜ 輔修土木工程學系</div>
+                        <div class="subtitle"> 資訊管理學系 大三 </div>
+                        <div class="subtitle"> 輔修: 土木工程學系</div>
                     </div>
                 </div>
                 <div class="divider"></div>
@@ -151,7 +60,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="item">
-                    <div class="section-title underline">HARD SKILLS</div>
+                    <div class="section-title underline">SKILLS</div>
                     <ul>
                         <li>Python（pandas, matplotlib）</li>
                         <li>C++、Arduino 基礎</li>
@@ -212,6 +121,7 @@
             </section>
         </div>
     </main>
+    <script src="dist/main.js"></script>
 </body>
 </html>
 

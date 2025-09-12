@@ -2,18 +2,13 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "ES2020",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2020", "DOM"],
+    "rootDir": "scripts",
+    "outDir": "dist",
     "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true
+    "noEmitOnError": true,
+    "skipLibCheck": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["scripts/**/*.ts"]
 }
-

@@ -8,7 +8,11 @@
     "dev": "tsc --watch",
     "serve": "npx http-server . -p 3000 -o"
   },
-  "keywords": ["timeline", "typescript", "frontend"],
+  "keywords": [
+    "timeline",
+    "typescript",
+    "frontend"
+  ],
   "author": "Li Jie-An",
   "license": "MIT",
   "devDependencies": {

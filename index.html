@@ -3,483 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>李倢安 — 趣味自我介紹</title>
-    <style>
-        /* 重置樣式 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Microsoft JhengHei', 'PingFang TC', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-            min-height: 100vh;
-        }
-
-        /* Header 樣式 */
-        .header {
-            background: #ffffff;
-            border-bottom: 1px solid #e9ecef;
-            padding: 1rem 2rem;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-
-        .nav {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #6c757d;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .nav-item:hover {
-            color: #007bff;
-        }
-
-        .nav-icon {
-            width: 16px;
-            height: 16px;
-        }
-
-        .theme-toggle {
-            background: none;
-            border: none;
-            font-size: 1.2rem;
-            cursor: pointer;
-            color: #6c757d;
-        }
-
-        .lang-btn {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 6px;
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-            cursor: pointer;
-            color: #495057;
-        }
-
-        /* Main 內容區域（活潑自我介紹） */
-        .main-content { margin-top: 80px; padding: 3rem 2rem; max-width: 1100px; margin-left:auto; margin-right:auto; }
-        .hero { display:grid; grid-template-columns: 180px 1fr; gap:1.5rem; align-items:center; background: linear-gradient(135deg,#e7f6ff,#fff5e8); border-radius: 18px; padding:1.5rem; box-shadow:0 14px 30px rgba(0,0,0,.08); margin-bottom:2rem; }
-        .hero img { width:180px; height:180px; object-fit:cover; border-radius:14px; }
-        .hero h1 { font-size: 2.2rem; color:#1f3c88; }
-        .hero p { color:#6c757d; }
-        .chips { display:flex; flex-wrap:wrap; gap:.6rem; margin-top:.75rem; }
-        .chip { padding:.35rem .75rem; background:#fff; border:1px dashed #9ac5d1; color:#0b7285; border-radius:999px; font-size:.95rem; }
-        .section { margin-top:2rem; }
-        .section h2 { font-size:1.4rem; color:#0b7285; margin-bottom:.75rem; }
-        .card { background:#ffffff; border-radius:16px; box-shadow:0 12px 26px rgba(0,0,0,.08); padding:1.25rem; }
-        .grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
-        .list { color:#495057; }
-        .list li { margin:.35rem 0; }
-        .gallery { display:grid; grid-template-columns: repeat(3,1fr); gap:.75rem; }
-        .ph { height:150px; border-radius:12px; background: linear-gradient(135deg,#e3fafc,#fff0f6); display:flex; align-items:center; justify-content:center; color:#868e96; }
-        .video { aspect-ratio:16/9; width:100%; border:0; border-radius:14px; box-shadow:0 10px 24px rgba(0,0,0,.1); }
-
-        /* 媒體容器：統一比例與外觀 */
-        .media-box { position: relative; aspect-ratio: 16/9; width: 100%; border-radius: 14px; overflow: hidden; background: #000; box-shadow: 0 10px 24px rgba(0,0,0,.08); }
-        .media-box > video,
-        .media-box > iframe,
-        .media-box > img { position:absolute; inset:0; width:100%; height:100%; object-fit: cover; border:0; display:block; }
-        .card { margin-bottom: 1rem; }
-
-        .hero-section {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .main-title {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            color: #6c757d;
-            font-style: italic;
-            margin-bottom: 2rem;
-        }
-
-        .filter-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-        }
-
-        .filter-btn {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 20px;
-            padding: 0.5rem 1.5rem;
-            font-size: 0.9rem;
-            cursor: pointer;
-            color: #495057;
-            transition: all 0.3s;
-        }
-
-        .filter-btn.active {
-            background: #007bff;
-            color: white;
-            border-color: #007bff;
-        }
-
-        .filter-btn:hover {
-            background: #e9ecef;
-        }
-
-        .filter-btn.active:hover {
-            background: #0056b3;
-        }
-
-        /* 時間軸樣式 */
-        .timeline-container {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline-line {
-            position: absolute;
-            left: 50px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: #dee2e6;
-        }
-
-        .timeline-events {
-            position: relative;
-        }
-
-        .timeline-event {
-            position: relative;
-            margin-bottom: 2rem;
-            margin-left: 100px;
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            border-left: 4px solid #007bff;
-        }
-
-        .timeline-event:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-        }
-
-        .timeline-event::before {
-            content: '';
-            position: absolute;
-            left: -75px;
-            top: 1.5rem;
-            width: 12px;
-            height: 12px;
-            background: #007bff;
-            border: 3px solid white;
-            border-radius: 50%;
-            box-shadow: 0 0 0 3px #007bff;
-        }
-
-        .event-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #2c3e50;
-        }
-
-        .event-category {
-            background: #007bff;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            position: absolute;
-            bottom: 1.5rem;
-            right: 1.5rem;
-        }
-
-        .timeline-year {
-            font-size: 1.1rem;
-            color: #6c757d;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .timeline-description {
-            color: #6c757d;
-            line-height: 1.6;
-        }
-
-        .event-image {
-            width: 60px;
-            height: 60px;
-            border-radius: 8px;
-            object-fit: cover;
-            margin-top: 1rem;
-        }
-
-        .event-date {
-            position: absolute;
-            right: 1.5rem;
-            top: 1.5rem;
-            text-align: right;
-            color: #6c757d;
-            font-size: 0.9rem;
-        }
-
-        .day {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-
-        /* 響應式設計 */
-        @media (max-width: 768px) {
-            .header {
-                padding: 1rem;
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .nav {
-                gap: 1rem;
-            }
-
-            .main-content {
-                margin-top: 120px;
-                padding: 2rem 1rem;
-            }
-
-            .main-title {
-                font-size: 2rem;
-            }
-
-            .timeline-event {
-                margin-left: 60px;
-            }
-
-            .timeline-event::before {
-                left: -45px;
-            }
-
-            .timeline-line {
-                left: 30px;
-            }
-
-            .event-header {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            .event-date {
-                position: static;
-                text-align: left;
-                margin-top: 1rem;
-            }
-
-            .event-category {
-                position: static;
-                margin-top: 1rem;
-                align-self: flex-end;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .main-title {
-                font-size: 1.5rem;
-            }
-
-            .filter-buttons {
-                gap: 0.5rem;
-            }
-
-            .filter-btn {
-                padding: 0.4rem 1rem;
-                font-size: 0.8rem;
-            }
-
-            .timeline-event {
-                margin-left: 50px;
-                padding: 1rem;
-            }
-
-            .timeline-event::before {
-                left: -35px;
-                width: 10px;
-                height: 10px;
-            }
-
-            .timeline-line {
-                left: 20px;
-            }
-        }
-
-        /* 動畫效果 */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .timeline-event {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        .timeline-event:nth-child(1) { animation-delay: 0.1s; }
-        .timeline-event:nth-child(2) { animation-delay: 0.2s; }
-        .timeline-event:nth-child(3) { animation-delay: 0.3s; }
-    </style>
+    <title>Joan's Website</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
     <header class="header">
-        <div class="logo">Joan Lee</div>
-        <nav class="nav">
-            <a href="index.html" class="nav-item">
-                <span class="nav-icon"></span>
-                Home 
-            </a>
-            <a href="about.html" class="nav-item">
-                <span class="nav-icon"></span>
-                About Me 
-            </a>
-            <a href="timelion.html" class="nav-item">
-                <span class="nav-icon"></span>
-                Timeline 
-            </a>
-        </nav>
+        <div class="header-content">
+            <div class="logo">Joan Lee</div>
+            <nav class="nav">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Home 
+                </a>
+                <a href="about.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    About Me 
+                </a>
+                <a href="timeline.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Timeline 
+                </a>
+                <a href="contact.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Contact 
+                </a>
+            </nav>
+        </div>
     </header>
 
     <main class="main-content">
         <!-- Hero -->
         <section class="hero">
-            <img src="photo_me.jpg" alt="李倢安 生活照">
-            <div>
-                <h1>李倢安</h1>
-                <p>一位介於海風與咖啡香之間、在台北半糖續命、喜歡運動與看海的 ISTP 天秤座。</p>
+            <div class="hero-left">
+                <p style="font-size:1.2rem; color:#24392e; margin-bottom:.5rem;">👋 嗨！</p>
+                <h1>我是<span class="highlight">李倢安</span></h1>
+            
                 <div class="chips">
-                    <span class="chip">天秤座</span>
                     <span class="chip">ISTP</span>
-                    <span class="chip">悲觀・EMO仔</span>
-                    <span class="chip">宅宅</span>
-                    <span class="chip">🥾☕️ </span>
+                    <span class="chip">EMO仔</span>
                     <span class="chip">綠豆加薏仁</span>
                     <span class="chip">咖哩飯要拌</span>
                     <span class="chip">豆漿豆花信徒</span>
                     <span class="chip">愛香菜</span>
                     <span class="chip">假聽團仔</span>
-                    <span class="chip">在台北喝半糖</span>
-                    <span class="chip">喜歡看海、運動</span>
+                    <span class="chip">🏸📸💻🛹</span>
+                    <span class="chip">🥾☕️</span>
                 </div>
+            </div>
+            <div class="hero-right">
+                <img src="assets/img/photo_me.jpg" alt="李倢安 生活照">
             </div>
         </section>
 
-        <!-- 興趣區塊 -->
-        <section class="section">
-            <div class="card">
-                <h2>🎯 KPOP</h2>
-                <ul class="list">
-                    <li>I-DLE、ITZY、NMIXX、Seventeen、TXT，本命是 <strong>舒華</strong></li>
-                </ul>
-
-                <div class="media-box">
-                    <video controls preload="metadata" playsinline>
-                        <source src="shua.mp4" type="video/mp4">
-                        您的瀏覽器不支援影片播放。
-                    </video>
-                </div>
-            </div>
-           
-        </section>
-
-        <section class="section">
-            <div class="card">
-                <h2>🛹 滑板初學者</h2>
-                <ul class="list">
-                    <li>大一看見學長姊滑板代步覺得很酷，衝動入坑！</li>
-                </ul>
-
-                <div class="media-box">
-                    <video controls preload="metadata" playsinline>
-                        <source src="skateboard.mp4" type="video/mp4">
-                        您的瀏覽器不支援影片播放。
-                    </video>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="card">
-                <h2>📷 攝影初學者</h2>
-                <p>大港回來後，衝動入手 Nikon 二手相機。</p>
-                <div class="media-box" style="aspect-ratio: 4/5;">
-                    <iframe src="https://www.instagram.com/p/C5v5EdMSIDo/embed/" allowtransparency="true"></iframe>
-                </div>
-                <div class="media-box" style="aspect-ratio: 4/5;">
-                    <iframe src="https://www.instagram.com/p/C5v39-vy-3M/embed/" allowtransparency="true"></iframe>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="card">
-                <h2>🎬 有興致時會剪 vlog</h2>
-                <div class="media-box">
-                    <iframe class="video" src="https://www.youtube.com/embed/InS_acGnYLY?si=DJecZkFu586jOx6B" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="card">
-                <h2>🖼 喜歡看展</h2>
-                <div class="media-box">
-                    <iframe class="video" src="https://www.youtube.com/embed/gw5202Cg5IU?si=J-lCm8Tmkheu3WtV" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-        </section>
+       
     </main>
 </body>

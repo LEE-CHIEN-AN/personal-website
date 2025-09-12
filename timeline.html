@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline | Joan's Website</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/timeline.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Joan Lee</div>
+            <nav class="nav">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Home 
+                </a>
+                <a href="about.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    About Me 
+                </a>
+                <a href="timeline.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Timeline 
+                </a>
+                <a href="contact.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Contact 
+                </a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="main-content">
+        <div class="hero-section">
+            <h1 class="main-title">我的人生旅程</h1>
+            <p class="subtitle">Life is a journey</p>
+        </div>
+
+        <!-- CSS-only Filters -->
+        <input type="radio" id="filter-all" name="cat" checked hidden>
+        <input type="radio" id="filter-study" name="cat" hidden>
+        <input type="radio" id="filter-work" name="cat" hidden>
+        <input type="radio" id="filter-tech" name="cat" hidden>
+        <input type="radio" id="filter-daily" name="cat" hidden>
+
+        <div class="filters">
+            <label class="filter-btn" for="filter-all">全部</label>
+            <label class="filter-btn" for="filter-study">學業</label>
+            <label class="filter-btn" for="filter-work">工作經歷</label>
+            <label class="filter-btn" for="filter-tech">技術/學習</label>
+            <label class="filter-btn" for="filter-daily">日常</label>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            <div id="timeline-events" class="timeline-events">
+                <!-- 靜態事件（由新到舊） -->
+                <div class="timeline-event left cat-tech">
+                    <div class="event-header">
+                        <div>
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-title">暑期實習</div>
+                        </div>
+                    </div>
+                    <div class="timeline-description">加入 CAE 專案，探索永續校園與數位雙生。</div>
+                    <div class="event-date">
+                        <div class="day">01</div>
+                        <div>JUL 2025</div>
+                    </div>
+                    <div class="event-category">技術/學習</div>
+                </div>
+
+                <div class="timeline-event right cat-work">
+                    <div class="event-header">
+                        <div>
+                            <div class="timeline-year">2023</div>
+                            <div class="timeline-title">北上台北</div>
+                        </div>
+                    </div>
+                    <div class="timeline-description">離鄉背井，踏上新大地，開啟挑戰。</div>
+                    <div class="event-date">
+                        <div class="day">01</div>
+                        <div>SEP 2023</div>
+                    </div>
+                    <div class="event-category">工作經歷</div>
+                </div>
+
+                <div class="timeline-event left cat-study">
+                    <div class="event-header">
+                        <div>
+                            <div class="timeline-year">2004</div>
+                            <div class="timeline-title">誕生</div>
+                        </div>
+                    </div>
+                    <div class="timeline-description">我來到這個世界，故事開始。</div>
+                    <div class="event-date">
+                        <div class="day">01</div>
+                        <div>JAN 2004</div>
+                    </div>
+                    <div class="event-category">學業</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
+
