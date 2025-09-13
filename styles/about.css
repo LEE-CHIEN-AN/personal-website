@@ -1,6 +1,6 @@
 .main-content { margin-top: 84px; padding: 2rem 1rem 4rem; max-width: 1200px; margin-left:auto; margin-right:auto; }
 .layout { display: grid; grid-template-columns: 320px 1fr; gap: 1.5rem; }
-.card { background:#f7f2ea; color:#2E2E2E; border-radius:16px; box-shadow:0 16px 36px rgba(0,0,0,.24); }
+.card { background:white; color:#2E2E2E; border-radius:16px; box-shadow:0 16px 36px rgba(0,0,0,.24); }
 .sidebar { padding: 1.5rem; position: sticky; top: 108px; height: fit-content; }
 .content { padding: 2rem; }
 .section-title { font-size: 1.05rem; letter-spacing:.08em; color:#b08e6a; margin-bottom: .75rem; font-weight:800; }
