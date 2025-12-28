@@ -122,16 +122,16 @@ function createTimelineEventHTML(event) {
     return `
     <div class="timeline-event ${categoryClass}">
       <div class="event-header">
-        <div>
+        <div class="event-header-content">
           <div class="timeline-year">${event.year}</div>
           <div class="timeline-title">${escapeHtml(event.title)}</div>
         </div>
+        <div class="event-date">
+          <span class="month">${mon || ''}</span>
+          <span class="day">${day || ''}</span>
+        </div>
       </div>
       <div class="timeline-description">${escapeHtml(event.description)}${linkHTML}</div>
-      <div class="event-date">
-        <span class="month">${mon || ''}</span>
-        <span class="day">${day || ''}</span>
-      </div>
       <div class="event-category">${escapeHtml(event.category)}</div>
     </div>
   `;
