@@ -1,18 +1,23 @@
 year,title,description,category,date,link_url,link_text
 2025,電影 - 大濛,公館百老匯看國片大濛，又哭又笑，中間還有規模7.4的地震，直接體驗一波4D電影,日常,DEC 27,,
+2025,手球隊寒訓,去手球隊寒訓當雷包充人頭數，跑位跑不明白，先前是練羽球的我接受無能,日常,DEC 24,,
 2025,網服 - NTU-COOL 台北陰影路徑規劃,NTU-COOL 是一個陰影導航網頁應用程式，幫助使用者在台北街道上找到最短且最涼爽（陰影最多）的路徑。 我是廢物，只負責資料庫建置、陰影預計算、做簡報、提供情緒價值,專案/報告,DEC 23,https://ntu-cooooooool.vercel.app/,網站連結
 2025,資料檢索與文字探勘導論 - 貼文音樂推薦,開發一個 IR 檢索系統，分析使用者的貼文內容，檢索並推薦歌詞文字、情緒、主題相符的歌曲，實現「以文找歌」的智慧推薦。我是廢物，只負責BM25和做簡報,專案/報告,DEC 22,https://reurl.cc/rK0jAy,簡報連結
-2025,PASSION國英數教材教法 - 現場實作,數學：正負數的乘除，利用撲克牌的遊戲做互動,專案/報告,DEC 19,https://www.canva.com/design/DAG7Obogv8s/DEP42zVBuAtF0yhdGyq8Ew/view?utm_content=DAG7Obogv8s&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7c021809ea,教學簡報
-2025,科技化教學 - 線上實作,數學：分數的比較，使用nearpod來互動、繪圖、選擇題、開放式問題、競賽,專案/報告,DEC 15,https://app.nearpod.com/?pin=2LIZU,教學簡報
+2025,PASSION國英數教材教法 - 現場實作,數學：正負數的乘除，利用撲克牌的遊戲做互動,學業,DEC 19,https://www.canva.com/design/DAG7Obogv8s/DEP42zVBuAtF0yhdGyq8Ew/view?utm_content=DAG7Obogv8s&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7c021809ea,教學簡報
+2025,科技化教學 - 線上實作,數學：分數的比較，使用nearpod來互動、繪圖、選擇題、開放式問題、競賽,學業,DEC 15,https://app.nearpod.com/?pin=2LIZU,教學簡報
 2025,資料庫 - Promoradar 優惠雷達,優惠彙整平台，幫助消費者即時掌握各店家的活動內容與日期區間。我是廢物，只負責超商和KFC商家和優惠資料蒐集整理、NoSQL資料庫設計和建置,專案/報告,DEC 10,https://youtu.be/kWVEpKwIuS0?si=zHCTsVnEsAWGscsu,Demo 影片
-2025,科技化教學 - 現場實作,國文閱讀討論課：生於憂患 死於安樂，利用 padlet 平台的AI繪圖、文氏圖、象限圖,專案/報告,DEC 08,https://padlet.com/a0903029537/padlet-9q7n0286325g82ui,教學簡報
+2025,科技化教學 - 現場實作,國文閱讀討論課：生於憂患 死於安樂，利用 padlet 平台的AI繪圖、文氏圖、象限圖,學業,DEC 08,https://padlet.com/a0903029537/padlet-9q7n0286325g82ui,教學簡報
 2025,手球新生盃 - 第4場 ,HCY 女生隊 : 抽一個想隊名 22 : 17 贏了歐耶，有機會第二名讚,學業,NOV 27,https://www.facebook.com/share/p/1C3fWvAwoU/,FB貼文連結
+2025,手球隊練習,被手球課老師aka手球隊教練邀請去看看手球隊練習，結果被叫去跟著練，當什麼都不會的大雷包,日常,NOV 10,,
 2025,手球新生盃 - 第3場 ,用快攻戰術贏了歐耶,學業,NOV 10,,
-2025,手球新生盃 - 第2場 ,差了一點點，輸了,學業,NOV 07,,
+2025,手球新生盃 - 第2場 ,差了一點點，輸了，但研究出快攻戰術，下次能贏,學業,NOV 07,,
 2025,鑑定師見面會 - 第一次看真人葉舒華,我是誰？葉舒華！本人超白，坐在山頂上，肉眼看不清楚臉有點可惜，期待下次見面,日常,NOV 05,,
 2025,第一次停修,這學期焦頭爛額，沒有固定複習越南語期中考超爛，第一次停修獻給越南文二上，改旁聽，謝謝老師願意幫我簽名還沒有問我問題,學業,NOV 05,,
+2025,CAE - 3D列印,學Blender基本中的基本操作，畫冷氣面板，嘗試3D列印,工作經歷,OCT 10,,
 2025,手球新生盃 - 第1場 ,抽一個想隊名 : HCY女生隊 15:8,學業,OCT 02,https://www.facebook.com/share/p/1K6Lc3bJJe/,FB貼文連結
 2025,CAE 專題生,把暑假實習-淨零循環健康校園之數位雙生應用平台之建構的內容做個結尾，預計在 2026 年 1 月 完成,工作經歷,OCT 01,,
+2025,資管服學高中生組 -大學生輔導助教,為期一學期，一對一輔導高中生，學習 google site 個人網站設計與實作、利用zerojudge 加強 Python 程式基礎,學業,SEP 26,https://docs.google.com/document/d/1XZ2-JF2uURr5wyzgeSYWUdGinHi6Z9RboOlqi1ABNcc/edit?usp=sharing,服學心得
+2025,回家 - 烤肉,回家來提前過生日，一起和親人烤肉、吃生日蛋糕，變成21歲老人,日常,SEP 21,,
 2025,網服 - 個人網站誕生,做出了這個個人網站，很醜，但內容很用心(?,專案/報告,SEP 15,https://lee-chien-an.github.io/personal-website/,網站連結
 2025,電影 - 紅豬,第一次去公館百老匯看電影，拿到紅豬海報了歐耶,日常,SEP 12,,
 2025,大三了，開啟師大PASSION偏鄉優質教育、科技化教學產業學分學程探索之旅,開始探索偏鄉教育與科技化教學，看自己有沒有熱忱走這條路。,學業,SEP 01,,
@@ -34,7 +39,7 @@ year,title,description,category,date,link_url,link_text
 2024,2024臺灣設計展在臺南,期中考後的獨旅，給自己放個假，逃離台北。,日常,NOV 03,,
 2024,工程圖學期中SketchUp專案 - 心理系南北館,利用 3D Warehouse 模型庫的心理系館模型進行修改，並增加自己對心理系館改造的想法，例如:草地變成滯洪池、荒廢的戶外平台變成休憩空間。,專案/報告,OCT 16,https://drive.google.com/file/d/1v7FCpZPg5nMOlm5X2lJHMybUXKhsdJMp/view?usp=sharing,簡報連結
 2024,2024 秋OUT,在公館，讀到天黑從咖啡廳出來，跑去公館水岸蹭免費舞台，聽到趙奕帆了開心。,日常,SEP 29,,
-2024,資管服學高中生組 -大學生輔導助教,為期一學期，一對一輔導高中生，從零開始學習C++，練習寫程式、考APCS。,學業,SEP 20,,
+2024,資管服學高中生組 -大學生輔導助教,為期一學期，一對一輔導高中生，從零開始學習C++，練習寫程式、考APCS。,學業,SEP 20,https://docs.google.com/document/d/1duMosg1w6Lw5CnTLc0lp4LK-PQUld6c84w3Rb6ozO7c/edit?usp=sharing,服學心得
 2024,校內工讀 - 開始擔任女八網管,協助宿舍住戶註冊宿舍網路、架設路由器、處理網路連線異常、速度過慢、舍胞們觸發資安事件等問題。,工作經歷,SEP 01,,
 2024,2024 JAM JAM ASIA,在北流，大二剛開學就跑音樂祭，第二次去大型音樂祭，用文化幣買了雙日票，有冷氣的音樂祭好舒服。,日常,SEP 07,,
 2024,大二了，開啟土木系實作課探索之旅,申請輔修土木系成功了，跑去土木系上看看開給土木大一新生的實作課。,學業,SEP 01,,
