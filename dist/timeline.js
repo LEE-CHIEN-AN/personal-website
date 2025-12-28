@@ -129,7 +129,8 @@ function createTimelineEventHTML(event) {
       </div>
       <div class="timeline-description">${escapeHtml(event.description)}${linkHTML}</div>
       <div class="event-date">
-        <div>${day || ''}</div>
+        <div class="day">${day || ''}</div>
+        <div>${mon || ''}</div>
       </div>
       <div class="event-category">${escapeHtml(event.category)}</div>
     </div>
