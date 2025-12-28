@@ -1,13 +1,15 @@
-import { highlightActiveNav } from './nav';
-import { initTimeline } from './timeline';
-import { initContactForm } from './contact';
+import { highlightActiveNav } from './nav.js';
+import { initTimeline } from './timeline.js';
+import { initContactForm } from './contact.js';
 
 function init(): void {
   highlightActiveNav();
 
   const isTimeline = document.getElementById('timeline-events') !== null;
   if (isTimeline) {
-    initTimeline();
+    initTimeline().catch((error) => {
+      console.error('初始化 timeline 時發生錯誤:', error);
+    });
   }
 
   const hasContactForm = document.getElementById('contact-form') !== null;

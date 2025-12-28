@@ -1,10 +1,7 @@
 /* Fonts: ChenYuluoyan (辰宇落雁體) */
 @font-face {
     font-family: "jf-openhuninn-2.1";                 /* ← 你等下就用這個名字 */
-    src:
-      url("../assets/jf-openhuninn-2.1.woff2") format("woff2"),
-      url("../assets/jf-openhuninn-2.1.woff") format("woff"),
-      url("../assets/jf-openhuninn-2.1.ttf") format("truetype");
+    src: url("../assets/jf-openhuninn-2.1.ttf") format("truetype");
     font-weight: 100;                             /* Thin 權重，多數瀏覽器也會合成 400 */
     font-style: normal;
     font-display: swap;

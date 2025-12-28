@@ -118,7 +118,9 @@ my-timeline/
 5. **開啟瀏覽器**
    訪問 `http://localhost:3000`
    或 直接用瀏覽器打開 index.html
+   強制重新載入頁面：按 Ctrl+Shift+R（Windows）或 Cmd+Shift+R（Mac）清除瀏覽器緩存
 
+   
 ## 📱 響應式設計
 
 網站採用響應式設計，完美適配各種裝置：
