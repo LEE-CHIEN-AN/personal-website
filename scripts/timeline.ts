@@ -58,7 +58,10 @@ function parseCSVLine(line: string): string[] {
 async function loadTimelineEvents(): Promise<TimelineEvent[]> {
   try {
     console.log('開始載入 CSV 檔案...');
-    const response = await fetch('data/timeline.csv');
+    // 使用相對於當前頁面的路徑
+    const csvPath = new URL('data/timeline.csv', window.location.href).href;
+    console.log('CSV 路徑:', csvPath);
+    const response = await fetch(csvPath);
     if (!response.ok) {
       throw new Error(`無法載入 CSV 檔案: ${response.statusText}`);
     }
