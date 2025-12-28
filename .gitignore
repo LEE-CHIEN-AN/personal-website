@@ -4,8 +4,9 @@ yarn-error.log
 yarn-debug.log*
 
 # 編譯輸出
-dist/
+# dist/ 需要提交到 GitHub Pages，所以不忽略
 *.js.map
+*.d.ts.map
 
 # 系統檔案
 .DS_Store
