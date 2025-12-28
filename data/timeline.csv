@@ -1,12 +1,26 @@
 year,title,description,category,date,link_url,link_text
+2025,電影 - 大濛,公館百老匯看國片大濛，又哭又笑，中間還有規模7.4的地震，直接體驗一波4D電影,日常,DEC 27,,
+2025,網服 - NTU-COOL 台北陰影路徑規劃,NTU-COOL 是一個陰影導航網頁應用程式，幫助使用者在台北街道上找到最短且最涼爽（陰影最多）的路徑。 我是廢物，只負責資料庫建置、陰影預計算、做簡報、提供情緒價值,專案/報告,DEC 23,https://ntu-cooooooool.vercel.app/,網站連結
+2025,資料檢索與文字探勘導論 - 貼文音樂推薦,開發一個 IR 檢索系統，分析使用者的貼文內容，檢索並推薦歌詞文字、情緒、主題相符的歌曲，實現「以文找歌」的智慧推薦。我是廢物，只負責BM25和做簡報,專案/報告,DEC 22,https://reurl.cc/rK0jAy,簡報連結
+2025,PASSION國英數教材教法 - 現場實作,數學：正負數的乘除，利用撲克牌的遊戲做互動,專案/報告,DEC 19,https://www.canva.com/design/DAG7Obogv8s/DEP42zVBuAtF0yhdGyq8Ew/view?utm_content=DAG7Obogv8s&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7c021809ea,教學簡報
+2025,科技化教學 - 線上實作,數學：分數的比較，使用nearpod來互動、繪圖、選擇題、開放式問題、競賽,專案/報告,DEC 15,https://app.nearpod.com/?pin=2LIZU,教學簡報
+2025,資料庫 - Promoradar 優惠雷達,優惠彙整平台，幫助消費者即時掌握各店家的活動內容與日期區間。我是廢物，只負責超商和KFC商家和優惠資料蒐集整理、NoSQL資料庫設計和建置,專案/報告,DEC 10,https://youtu.be/kWVEpKwIuS0?si=zHCTsVnEsAWGscsu,Demo 影片
+2025,科技化教學 - 現場實作,國文閱讀討論課：生於憂患 死於安樂，利用 padlet 平台的AI繪圖、文氏圖、象限圖,專案/報告,DEC 08,https://padlet.com/a0903029537/padlet-9q7n0286325g82ui,教學簡報
+2025,手球新生盃 - 第4場 ,HCY 女生隊 : 抽一個想隊名 22 : 17 贏了歐耶，有機會第二名讚,學業,NOV 27,https://www.facebook.com/share/p/1C3fWvAwoU/,FB貼文連結
+2025,手球新生盃 - 第3場 ,用快攻戰術贏了歐耶,學業,NOV 10,,
+2025,手球新生盃 - 第2場 ,差了一點點，輸了,學業,NOV 07,,
+2025,鑑定師見面會 - 第一次看真人葉舒華,我是誰？葉舒華！本人超白，坐在山頂上，肉眼看不清楚臉有點可惜，期待下次見面,日常,NOV 05,,
+2025,第一次停修,這學期焦頭爛額，沒有固定複習越南語期中考超爛，第一次停修獻給越南文二上，改旁聽，謝謝老師願意幫我簽名還沒有問我問題,學業,NOV 05,,
+2025,手球新生盃 - 第1場 ,抽一個想隊名 : HCY女生隊 15:8,學業,OCT 02,https://www.facebook.com/share/p/1K6Lc3bJJe/,FB貼文連結
 2025,CAE 專題生,把暑假實習-淨零循環健康校園之數位雙生應用平台之建構的內容做個結尾，預計在 2026 年 1 月 完成,工作經歷,OCT 01,,
+2025,網服 - 個人網站誕生,做出了這個個人網站，很醜，但內容很用心(?,專案/報告,SEP 15,https://lee-chien-an.github.io/personal-website/,網站連結
 2025,電影 - 紅豬,第一次去公館百老匯看電影，拿到紅豬海報了歐耶,日常,SEP 12,,
 2025,大三了，開啟師大PASSION偏鄉優質教育、科技化教學產業學分學程探索之旅,開始探索偏鄉教育與科技化教學，看自己有沒有熱忱走這條路。,學業,SEP 01,,
 2025,騎車去大稻埕,實習結束了，和實習生們一起吃熱炒，騎車去大稻埕喝酒，沿路在公園玩得跟小孩一樣,日常,AUG 15,,
 2025,CAE 暑期實習成果展,以 Wio Link 感測器、MQTT、PostgreSQL、Supabase、Python + Plotly + Streamlit建置平台，呈現室內熱力圖（PMV/PPD)、 CO₂/VOC趨勢，並研究pythermalcomfort。,工作經歷,AUG 15,https://drive.google.com/file/d/1TfRlYyPhxsr2Qqx-3L_3iDbOzRVoG3mM/view?usp=sharing,暑期成果海報
 2025,CAE 暑期實習,研究初體驗，看看自己適不適合做研究。,工作經歷,JUN 23,,
 2025,電影 - 心之谷,跟兩位輔幹一起看電影，這部真的太純愛了，看不太下去笑死。,日常,JUN 13,,
-2025,資管導 - RoRobot數學聊天機器人安卓APP,資訊管理導論專案，我負責訪談博幼基金會與台師大胡翠君教授確認偏鄉教學現場狀況，並使用GPT和Gemini API 並設計Propmt提供互動式解題引導，支援國小三、四年級數學，即時聊天反饋。,專案/報告,JUN 6,https://youtu.be/VNoURcefqJQ,APP Demo 影片
+2025,資管導 - RoRobot數學聊天機器人安卓APP,資訊管理導論專案，我負責訪談博幼基金會與台師大胡翠君教授確認偏鄉教學現場狀況，並使用GPT和Gemini API 並設計Propmt提供互動式解題引導，支援國小三、四年級數學，即時聊天反饋。,專案/報告,JUN 06,https://youtu.be/VNoURcefqJQ,APP Demo 影片
 2025,統計學 - Facebook 互動分析,分析Facebook貼文類型、內容分類、發文月份對互動指標(點擊率、留言率)的影響。,專案/報告,JUN 11,https://drive.google.com/file/d/1sFcTs4zQGoHeY1sRIUuceCLcVOjhmZhs/view?usp=sharing,報告連結
 2025,2025嘉義縣龍舟賽 - 一坨答辯,期末考前的周末，跟一群18周的高中同學去划龍舟，跟瘋子一樣。,日常,MAY 31,,
 2025,組織行為 - 四季酒店個案分析,我負責撰寫四季酒店的人力資源戰略與進入巴黎/法國市場的方式、策略優勢和劣勢。,專案/報告,APR 28,https://drive.google.com/file/d/1e_ad57E1O5AeIpYuumR42OTYBppmVERS/view?usp=sharing,報告連結
