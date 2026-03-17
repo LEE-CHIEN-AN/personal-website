@@ -1,0 +1,239 @@
+.main-content {
+    margin-top: 84px;
+    padding: 2rem 1rem 4rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.layout-portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.portfolio-intro {
+    background: white;
+    color: #2E2E2E;
+    border-radius: 16px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, .18);
+}
+
+.portfolio-intro-text {
+    margin-top: .75rem;
+    color: #6C757D;
+    font-size: 0.98rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .14);
+    padding: 1.25rem 1.3rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #0a3d35;
+}
+
+.project-subtitle {
+    font-size: 0.95rem;
+    color: #6C757D;
+}
+
+.project-role {
+    font-size: 0.9rem;
+    color: #b08e6a;
+}
+
+.project-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    color: #495057;
+    font-size: 0.95rem;
+}
+
+.project-description {
+    white-space: pre-line;
+}
+
+.project-section-title {
+    font-size: 0.9rem;
+    letter-spacing: .08em;
+    color: #b08e6a;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.project-contributions {
+    margin-left: 1.1rem;
+}
+
+.project-contributions li {
+    margin: .3rem 0;
+}
+
+.project-techstack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.15rem;
+}
+
+.tag {
+    font-size: .82rem;
+    padding: .15rem .6rem;
+    border-radius: 999px;
+    border: 1px solid #d3c0a8;
+    background: #fffdf9;
+    color: #1f4c4a;
+}
+
+.tag-tech {
+    border-color: #b08e6a;
+}
+
+.tag-meta {
+    border-color: #9fb5b0;
+    color: #345454;
+    background: #f3fbfa;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.project-link {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: all .18s ease;
+}
+
+.project-link-demo {
+    background: #0a3d35;
+    color: #f6efe6;
+}
+
+.project-link-github {
+    background: #ffffff;
+    color: #0a3d35;
+    border-color: #0a3d35;
+}
+
+.project-link-youtube {
+    background: #ff6b6b;
+    color: #fff9f5;
+}
+
+.project-link-pdf,
+.project-link-design {
+    background: #fff9f2;
+    color: #8a5a28;
+    border-color: #e0c4a1;
+}
+
+.project-link-other,
+.project-link-image {
+    background: #f2fbff;
+    color: #245a7a;
+    border-color: #b5d4e5;
+}
+
+.project-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .12);
+}
+
+.project-embeds {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.embed-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.embed-title {
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.embed-frame-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+}
+
+.embed-frame-container iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.embed-ratio-16-9 .embed-frame-container {
+    padding-top: 56.25%;
+}
+
+.embed-ratio-4-3 .embed-frame-container {
+    padding-top: 75%;
+}
+
+.embed-ratio-1-1 .embed-frame-container {
+    padding-top: 100%;
+}
+
+.projects-empty,
+.projects-error {
+    text-align: center;
+    color: #6C757D;
+    font-size: 0.95rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+

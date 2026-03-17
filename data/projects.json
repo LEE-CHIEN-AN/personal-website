@@ -1,0 +1,286 @@
+[
+  {
+    "id": "ntu-cool-shadow-routing",
+    "title": "NTU-COOL 台北陰影路徑規劃",
+    "subtitle": "在最熱的城市裡，找最涼的路 114-1 網路服務程式設計",
+    "description": "NTU-COOL 是一個陰影導航網頁應用程式，幫助使用者在台北街道上找到最短且最涼爽（陰影最多）的路徑。\\n我們使用台北市政府公開的 3D 建物建模資料，根據特定時間的太陽方位進行投影，計算出每條路上的陰影面積，並最佳化路線的距離與陰影路段比例。",
+    "role": "負責資料庫建置、陰影預計算、計算時間 log 紀錄與雲端部屬，並製作簡報。",
+    "contributions": [
+      "設計並實作 PostgreSQL / Supabase 資料庫 schema",
+      "撰寫陰影預計算腳本與效能優化（含計算時間 log）",
+      "協助雲端部屬與環境設定",
+      "整理技術重點並製作期末簡報"
+    ],
+    "techStack": [
+      "Python",
+      "PostgreSQL",
+      "Supabase",
+      "WebGIS",
+      "Web Development"
+    ],
+    "links": [
+      {
+        "type": "demo",
+        "label": "Website",
+        "url": "https://ntu-cooooooool.vercel.app/"
+      },
+      {
+        "type": "youtube",
+        "label": "Demo 影片",
+        "url": "https://youtu.be/B1G-FGSvSJg?si=rjoH9-fQRKv4zuRS"
+      }
+    ],
+    "embeds": [
+      {
+        "type": "youtube",
+        "title": "NTU-COOL Demo 影片",
+        "src": "https://www.youtube.com/embed/B1G-FGSvSJg",
+        "ratio": "16-9"
+      },
+      {
+        "type": "canva",
+        "title": "NTU-COOL 簡報",
+        "src": "https://www.canva.com/design/DAG8Sg_VWgw/_phpxdTpwHmmV3_KbhQEyw/view?embed",
+        "ratio": "16-9"
+      }
+    ],
+    "tags": [
+      "Team Project",
+      "Course Project",
+      "Web Service Programming"
+    ]
+  },
+  {
+    "id": "promoradar",
+    "title": "Promoradar 優惠雷達",
+    "subtitle": "整合各大飲料與連鎖品牌優惠資訊的平台 114-1 資料庫管理",
+    "description": "Promoradar 是一個集中飲料與連鎖品牌優惠資訊的平台，幫助使用者不用到處翻 IG、官網或海報，就能一次掌握近期有哪些買一送一、折扣或限時活動。\\n系統提供日曆與地圖瀏覽、條件篩選與收藏功能，同時也提供品牌管理後台，讓商家能上架與管理優惠活動並追蹤使用狀況。",
+    "role": "負責工人智慧蒐集與整理優惠券資料，並規劃 NoSQL 資料庫結構。",
+    "contributions": [
+      "設計 NoSQL 資料模型（活動、品牌、地點、標籤）",
+      "蒐集並清理多來源優惠資訊（IG、官網、海報）",
+      "協助前後端串接資料欄位與測試",
+      "整理資料來源與維護流程文件"
+    ],
+    "techStack": [
+      "NoSQL",
+      "Data Cleaning",
+      "Web Scraping (semi-manual)",
+      "Web App"
+    ],
+    "links": [
+      {
+        "type": "demo",
+        "label": "Website",
+        "url": "https://promoradar.vercel.app/"
+      },
+      {
+        "type": "youtube",
+        "label": "Demo 影片",
+        "url": "https://youtu.be/kWVEpKwIuS0?si=xYbxqw948L-QSHd2"
+      },
+      {
+        "type": "github",
+        "label": "GitHub Repo",
+        "url": "https://github.com/b12705030/promoradar"
+      },
+      {
+        "type": "pdf",
+        "label": "書面報告",
+        "url": "https://docs.google.com/document/d/1Y7UGS-VWwvEqdTCc1cnxJzo-KphmPwX9Qo9yaLaUAmw/edit?usp=sharing"
+      }
+    ],
+    "embeds": [
+      {
+        "type": "youtube",
+        "title": "Promoradar Demo 影片",
+        "src": "https://www.youtube.com/embed/kWVEpKwIuS0",
+        "ratio": "16-9"
+      },
+      {
+        "type": "canva",
+        "title": "Promoradar 簡報",
+        "src": "https://www.canva.com/design/DAG7BOheVYI/Hjrh9XwW-xvYziP2h2QkkA/view?embed",
+        "ratio": "16-9"
+      }
+    ],
+    "tags": [
+      "Team Project",
+      "Course Project",
+      "Database Management"
+    ]
+  },
+  {
+    "id": "Music Recommendation for Posts ",
+    "title": "情緒貼文音樂推薦",
+    "subtitle": "114-1 資料檢索與文字探勘導論 期末專題",
+    "description": "社群媒體使用者在發佈貼文時，常希望搭配能呼應情境與氛圍的歌曲，我們提出一套以歌詞為檢索語料的「以文找歌」推薦系統，將社群貼文視為查詢，於大規模歌詞庫中自動推薦意境相符的歌曲。先以 BM25 篩選候選歌曲以兼顧效率，再結合貼文與歌曲在情緒與主題空間的相似性，並透過歌曲相似度圖譜上的 Personalized PageRank 進行擴散與重排序，得出最終推薦歌曲。",
+    "role": "負責 BM25 篩選候選歌曲、做簡報。",
+    "contributions": [
+      "BM25 篩選候選歌曲",
+      "做簡報",
+      "寫報告"
+    ],
+    "techStack": [
+      "Python",
+      "BM25",
+      "Personalized PageRank",
+      "Music Recommendation"
+    ],
+    "links": [
+      {
+        "type": "github",
+        "label": "GitHub Repo",
+        "url": "https://github.com/yuzuEN/IRTM-Music-Recommendation/tree/main"
+      },
+      {
+        "type": "pdf",
+        "label": "書面報告",
+        "url": "https://drive.google.com/file/d/1JOXW7cIqy83l116YKsceb9FDnlTlyxj9/view?usp=sharing"
+      }
+    ],
+    "embeds": [
+      {
+        "type": "canva",
+        "title": "情緒貼文音樂推薦 簡報",
+        "src": "https://www.canva.com/design/DAG8H7naKmA/0Bf-hbVL5g2bKPh89t2plg/view?embed",
+        "ratio": "16-9"
+      }
+    ],
+    "tags": [
+      "Team Project",
+      "Course Project",
+      "Data Retrieval and Text Mining"
+    ]
+  },
+  {
+    "id": "virtual-resume-site",
+    "title": "Virtual Resume | Joan Lee",
+    "subtitle": "個人簡歷與專案彙整網站",
+    "description": "以原生 HTML/CSS/JavaScript 製作的個人網站，整合 About、Timeline、Contact 等頁面，呈現學習歷程與作品。這個作品集頁面本身也可視為此專案的一部分。",
+    "role": "獨立開發，負責設計網站資訊架構、版面與互動。",
+    "contributions": [
+      "規劃網站資訊架構與導覽設計",
+      "實作 RWD 版面與共用樣式（base.css 等）",
+      "撰寫 Timeline 數據並以 CSV/JS 渲染",
+      "規劃作品集 JSON 結構與渲染方式"
+    ],
+    "techStack": [
+      "HTML",
+      "CSS",
+      "TypeScript"
+    ],
+    "links": [
+      {
+        "type": "github",
+        "label": "GitHub Repo",
+        "url": "https://github.com/LEE-CHIEN-AN/personal-website"
+      }
+    ],
+    "embeds": [],
+    "tags": [
+      "Side Project",
+      "Portfolio"
+    ]
+  },
+  {
+    "id": "rorobot-game",
+    "title": "ROROBOT 數學小老師",
+    "subtitle": "113-2 資訊管理導論 G13 期末專題",
+    "description": "「RoRo 數學小老師」👩‍🏫🤖，是專門設計給國小生或數學初學者的學習小幫手！\\n這位AI小老師會：\\n✅ 一步步拆解數學概念，讓你不再霧煞煞🌫\\n✅ 用🍱便當、🍬糖果幫你想像題目情境\\n✅ 再加上一點諧音梗+表情符號 ✨讓學數學變得有趣又好笑\\n✅ 不直接給答案，但會慢慢引導你自己想出來！\\n目標對象是基礎不穩、缺乏動機的學生，希望能幫助大家重拾學數學的信心🌈",
+    "role": "負責設計與實作 AI 小老師、錄製影片",
+    "contributions": [
+        "設計與實作 AI 小老師",
+        "串接 GPT API 和 Gemini API",
+        "設計 Prompt 提供互動式解題引導",
+        "錄製影片" 
+    ],
+    "techStack": [
+      "Kotlin",
+      "GPT API",
+      "Gemini API",
+      "Android APP"
+    ],
+    "links": [
+      {
+        "type": "youtube",
+        "label": "Demo 影片",
+        "url": "https://www.youtube.com/embed/VNoURcefqJQ?si=CViQASE4fxJnMNT9"
+      },
+      {
+        "type": "youtube",
+        "label": "胡翠君教授訪談影片",
+        "url": "https://www.youtube.com/embed/9waIRBj-oG4?si=wjJhzLNbK98avrlv"
+      },
+      {
+        "type": "pdf",
+        "label": "書面報告",
+        "url": "https://docs.google.com/document/d/1gTNrq0bAtD9uIar9p1rGYAYy8Xg7U8r7cJwTYugOW1w/edit?usp=sharing"
+      },
+      {
+        "type": "apk",
+        "label": "APK 檔案",
+        "url": "https://drive.google.com/file/d/1JwpoD5sAlJniv6yMh400Db9joiGlMbWG/view?usp=sharing"
+      },
+      {
+        "type": "canva",
+        "label": "資訊管理導論期末報告簡報",
+        "url": "https://www.canva.com/design/DAGpY-TseUE/MoYVznWCNPDMplca0i9pZQ/view?embed"
+      }
+    ],
+    "embeds": [
+      {
+        "type": "canva",
+        "title": "資訊管理導論期末報告簡報",
+        "src": "https://www.canva.com/design/DAGpY-TseUE/MoYVznWCNPDMplca0i9pZQ/view?embed",
+        "ratio": "16-9"
+      },
+      {
+        "type": "youtube",
+        "title": "胡翠君教授訪談影片-資管導期末專題發想",
+        "src": "https://www.youtube.com/embed/9waIRBj-oG4?si=wjJhzLNbK98avrlv",
+        "ratio": "16-9"
+      }
+    ],
+    "tags": [
+      "Team Project",
+      "Course Project",
+      "Game"
+    ]
+  },
+  {
+    "id": "bbblue-game",
+    "title": "BBBLUE 格格不入",
+    "subtitle": "第16組 112-1程式設計期末專案",
+    "description": "這是一款雙人對戰遊戲，結合了「格格不入」桌遊的元素。遊戲起始時，雙方玩家需要選擇角色，每個角色擁有不同的骰子點數和觸發的升級技能。玩家通過擲骰子生成的隨機數字來移動角色，目標是撞到對方所在的方格以獲勝。在遊戲開始前，雙方玩家將輸入1-9來選擇自己的角色，然後進入遊戲。在遊戲過程中，玩家可以使用鍵盤上的W、A、S、D和上下左右按鍵來操縱角色進行對戰。\\n遊戲地圖上隨機分佈著兩種障礙物（石頭和湖）、機會和命運。當玩家經過機會或命運時，會觸發特殊功能，例如增加下一局的步數、移除角色周圍的障礙物等。當玩家經過機會或命運時，剩餘步數將歸零，並停在機會或命運的位置上。這款遊戲的核心特點包括玩家的角色選擇、骰子移動、對戰操作以及地圖上的多樣化元素，為玩家提供了一個有趣而具挑戰性的遊戲體驗。",
+    "role": "負責製作簡報、錄製影片",
+    "contributions": [
+        "整理技術重點並製作期末簡報",
+        "錄製遊戲操作影片" 
+    ],
+    "techStack": [
+      "C++"
+    ],
+    "links": [
+      {
+        "type": "youtube",
+        "label": "Demo 影片",
+        "url": "https://www.youtube.com/embed/2pElUXNK9GM?si=EKoEapR0lhjhqMje"
+      }
+    ],
+    "embeds": [
+      {
+        "type": "youtube",
+        "title": "BBBLUE 格格不入 Demo 影片",
+        "src": "https://www.youtube.com/embed/2pElUXNK9GM?si=EKoEapR0lhjhqMje",
+        "ratio": "16-9"
+      }
+    ],
+    "tags": [
+      "Team Project",
+      "Course Project",
+      "Game"
+    ]
+  }
+]
+

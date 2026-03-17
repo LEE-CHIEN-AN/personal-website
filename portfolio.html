@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Joan's Website</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Joan Lee</div>
+            <nav class="nav">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Home
+                </a>
+                <a href="cv.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    CV
+                </a>
+                <a href="portfolio.html" class="nav-item nav-item-active">
+                    <span class="nav-icon"></span>
+                    Portfolio
+                </a>
+                <a href="timeline.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Timeline
+                </a>
+                <a href="contact.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Contact
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="layout layout-portfolio">
+            <section class="card portfolio-intro">
+                <h1 class="name" style="margin-bottom:.25rem;">Portfolio | Projects</h1>
+                <p class="portfolio-intro-text">
+                    這裡整理了我在課程、實習與自學中的代表性作品。
+                    每個卡片都會說明專案背景、我負責的部分、使用到的技術，以及 Demo / 簡報 / 原始碼連結。
+                    之後有新作品時，只要更新一個 JSON 檔就能自動出現在這裡。
+                </p>
+            </section>
+
+            <section class="portfolio-controls">
+                <!-- 預留之後做搜尋 / 篩選用，目前先不實作 -->
+                <!-- <input type="search" placeholder="搜尋作品或技術關鍵字..." class="portfolio-search" /> -->
+            </section>
+
+            <section id="projects-container" class="projects-grid" aria-live="polite">
+                <!-- 由 JS 動態渲染作品卡片 -->
+            </section>
+
+            <section id="projects-empty-state" class="projects-empty hidden">
+                目前還沒有作品被記錄進來，之後會陸續更新，敬請期待！
+            </section>
+
+            <section id="projects-error-state" class="projects-error hidden">
+                嗚嗚，載入作品資料時出現問題，請稍後重新整理頁面再試一次。
+            </section>
+        </div>
+    </main>
+
+    <script type="module" src="dist/src/portfolio.js"></script>
+</body>
+</html>
+

@@ -4,11 +4,11 @@
     "module": "ES2020",
     "moduleResolution": "Bundler",
     "lib": ["ES2020", "DOM"],
-    "rootDir": "scripts",
+    "rootDir": ".",
     "outDir": "dist",
     "strict": true,
     "noEmitOnError": true,
     "skipLibCheck": true
   },
-  "include": ["scripts/**/*.ts"]
+  "include": ["scripts/**/*.ts", "src/**/*.ts"]
 }
