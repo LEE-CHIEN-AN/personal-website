@@ -1,0 +1,9 @@
+- link "查看詳情：範例" [ref=e2] [cursor=pointer]:
+  - img "範例封面" [ref=e4]
+  - generic [ref=e5]: 整張卡片都可點
+  - generic [ref=e6]: 除了底下按鈕，直接點卡片空白處也會導航。而且 Tab 可以跳到卡片，用 Enter/空白鍵 也能進詳情。
+  - generic [ref=e7]:
+    - link "View →" [ref=e8]:
+      - /url: project.html?id=demo
+    - link "Website" [ref=e9]:
+      - /url: https://example.com

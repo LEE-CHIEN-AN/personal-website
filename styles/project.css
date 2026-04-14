@@ -1,0 +1,171 @@
+.layout-project {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-breadcrumb {
+    display: flex;
+    align-items: center;
+}
+
+.project-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #0a3d35;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: #ffffff;
+    border: 1px solid rgba(10, 61, 53, 0.18);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .10);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.project-back:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .14);
+}
+
+.project-card-detail {
+    padding: 1.4rem 1.5rem;
+}
+
+.project-detail-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+}
+
+.project-detail-title {
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: #0a3d35;
+    line-height: 1.2;
+}
+
+.project-detail-subtitle {
+    color: #6C757D;
+    font-size: 1.02rem;
+}
+
+.project-detail-role {
+    color: #b08e6a;
+    font-size: 0.98rem;
+}
+
+.project-detail-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-detail-section {
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(0,0,0,.06);
+}
+
+.project-detail-section-title {
+    font-size: 0.9rem;
+    letter-spacing: .08em;
+    color: #b08e6a;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.project-detail-description {
+    white-space: pre-line;
+    color: #495057;
+    font-size: 1rem;
+}
+
+.project-detail-list {
+    margin-left: 1.1rem;
+    color: #495057;
+}
+
+.project-detail-list li {
+    margin: .35rem 0;
+}
+
+.project-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+ .project-detail-dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.4rem 0.9rem;
+    margin: 0 0 0.65rem;
+    color: #495057;
+ }
+
+ .project-detail-dl dt {
+    font-weight: 900;
+    color: #0a3d35;
+ }
+
+ .project-detail-dl dd {
+    margin: 0;
+    color: #495057;
+ }
+
+ .project-detail-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+ }
+
+/* Reuse existing chip styles from portfolio.css via tag classes */
+.project-embeds {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.embed-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.embed-title {
+    font-size: 0.95rem;
+    color: #495057;
+}
+
+.embed-frame-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+}
+
+.embed-frame-container iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.embed-ratio-16-9 .embed-frame-container { padding-top: 56.25%; }
+.embed-ratio-4-3  .embed-frame-container { padding-top: 75%; }
+.embed-ratio-1-1  .embed-frame-container { padding-top: 100%; }
+
+@media (max-width: 768px) {
+    .project-card-detail {
+        padding: 1.1rem 1.1rem;
+    }
+    .project-detail-title {
+        font-size: 1.45rem;
+    }
+}
+

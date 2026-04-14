@@ -1,0 +1,95 @@
+- generic [ref=e2]:
+  - heading "Portfolio — 「卡片縮短 + 點入看詳情」互動對照" [level=1] [ref=e3]
+  - paragraph [ref=e4]: 左：當頁強調快速掃描，詳情用 Modal 開啟。右：獨立詳情頁（URL 可分享）。
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - heading "方案 A：網格卡片 + Modal 詳情" [level=2] [ref=e7]
+      - generic [ref=e8]:
+        - article [ref=e9]:
+          - generic [ref=e11]: Geospatial Routing System with Environmental Optimization
+          - generic [ref=e12]:
+            - generic [ref=e13]: Fall 2025
+            - generic [ref=e14]: Web Programming
+          - generic [ref=e15]: 一句細節摘要，不超過三行，看得到总結但不塞滿整個卡片。
+          - generic [ref=e16]:
+            - link "View →" [ref=e17] [cursor=pointer]:
+              - /url: "#"
+            - link "Website" [ref=e18] [cursor=pointer]:
+              - /url: "#"
+        - article [ref=e19]:
+          - generic [ref=e21]: Camouflage Object Detection in Images with Deep Learning
+          - generic [ref=e22]:
+            - generic [ref=e23]: Spring 2025
+            - generic [ref=e24]: Deep Learning
+          - generic [ref=e25]: 維持一致的高度：卡片以檔案型掃描為主，詳細內容例如 Contribution/Embed 收進 Modal。
+          - generic [ref=e26]:
+            - link "View →" [ref=e27] [cursor=pointer]:
+              - /url: "#"
+            - link "Video" [ref=e28] [cursor=pointer]:
+              - /url: "#"
+        - article [ref=e29]:
+          - generic [ref=e31]: Game-based Learning Platform with AI Integration
+          - generic [ref=e32]:
+            - generic [ref=e33]: Spring 2025
+            - generic [ref=e34]: Android App
+          - generic [ref=e35]: 同樣维持三行摘要，下方固定留一個主行動：View，開啟詳情。
+          - generic [ref=e36]:
+            - link "View →" [ref=e37] [cursor=pointer]:
+              - /url: "#"
+            - link "Design" [ref=e38] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e39]:
+        - heading "View 開啟後（Modal 示意）" [level=3] [ref=e40]
+        - paragraph [ref=e41]: 詳情統一放在覆蓋層，不讓列表長到很難掃。
+        - list [ref=e42]:
+          - listitem [ref=e43]: Description 全文
+          - listitem [ref=e44]: 「我負責的部分」 list
+          - listitem [ref=e45]: Tech / Tags
+          - listitem [ref=e46]: Links + Embeds（YouTube/Canva）
+        - paragraph [ref=e47]: 高層目標：列表用來掃描，點入才讀詳情。
+    - generic [ref=e48]:
+      - heading "方案 B：網格卡片 + 獨立詳情頁" [level=2] [ref=e49]
+      - generic [ref=e50]:
+        - article [ref=e51]:
+          - generic [ref=e53]: (同上) 專案標題
+          - generic [ref=e54]:
+            - generic [ref=e55]: "2025"
+            - generic [ref=e56]: Web
+          - generic [ref=e57]: "列表一樣採短摘要，View 是導航到 `project.html?id=...`"
+          - generic [ref=e58]:
+            - link "View →" [ref=e59] [cursor=pointer]:
+              - /url: "#"
+            - link "Share" [ref=e60] [cursor=pointer]:
+              - /url: "#"
+        - article [ref=e61]:
+          - generic [ref=e63]: (同上) 專案標題
+          - generic [ref=e64]:
+            - generic [ref=e65]: Spring 2025
+            - generic [ref=e66]: AI
+          - generic [ref=e67]: 適合你的 JSON 可足夠大的狀態：連 Embeds 都可以放在獨立頁內，不擠在卡片。
+          - generic [ref=e68]:
+            - link "View →" [ref=e69] [cursor=pointer]:
+              - /url: "#"
+            - link "Repo" [ref=e70] [cursor=pointer]:
+              - /url: "#"
+        - article [ref=e71]:
+          - generic [ref=e73]: (同上) 專案標題
+          - generic [ref=e74]:
+            - generic [ref=e75]: "2025"
+            - generic [ref=e76]: Android
+          - generic [ref=e77]: 實作會在頁面頂部加 Back 返回，保留捲軸位置。
+          - generic [ref=e78]:
+            - link "View →" [ref=e79] [cursor=pointer]:
+              - /url: "#"
+            - link "Video" [ref=e80] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e81]:
+        - heading "獨立詳情頁 結構（概念）" [level=3] [ref=e82]
+        - list [ref=e83]:
+          - listitem [ref=e84]: Hero：圖片/標題/subtitle/role
+          - listitem [ref=e85]: Overview：Description
+          - listitem [ref=e86]: Responsibilities：Contributions
+          - listitem [ref=e87]: Tech & Tags
+          - listitem [ref=e88]: Links：Website/Repo/Video/PDF
+          - listitem [ref=e89]: Embeds：YT/Canva iframe（全寬，比例集中處理）
+        - paragraph [ref=e90]: 適合帶有多個 Embed 的專案，也能讓分享具有水準（一個 URL 就能直達某一個專案）。

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Joan's Website</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/project.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Joan Lee</div>
+            <nav class="nav">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Home
+                </a>
+                <a href="cv.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    CV
+                </a>
+                <a href="portfolio.html" class="nav-item nav-item-active">
+                    <span class="nav-icon"></span>
+                    Portfolio
+                </a>
+                <a href="timeline.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Timeline
+                </a>
+                <a href="contact.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    Contact
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="layout layout-project">
+            <nav class="project-breadcrumb">
+                <a class="project-back" href="portfolio.html" aria-label="回到 Portfolio">← Back</a>
+            </nav>
+
+            <section id="project-container" class="card project-card-detail" aria-live="polite">
+                <!-- 由 JS 動態渲染 -->
+            </section>
+
+            <section id="project-error-state" class="projects-error hidden">
+                找不到這個作品，或載入資料時出現問題。請返回 Portfolio 再試一次。
+            </section>
+        </div>
+    </main>
+
+    <script type="module" src="dist/src/project.js"></script>
+</body>
+</html>
