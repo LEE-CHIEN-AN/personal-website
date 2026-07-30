@@ -110,9 +110,10 @@
                     <ul>
                         <li><strong>Programming</strong>: Python, SQL, C++ (basic)</li>
                         <li><strong>Web Development (Vibe coding)</strong>: HTML, CSS, TypeScript, React, FastAPI, Node.js, Next.js</li>
-                        <li><strong>Data &amp; Database</strong>: SQL (PostgreSQL, PostGIS, Supabase), NoSQL (MongoDB)</li>
+                        <li><strong>Data & Database</strong>: SQL (PostgreSQL, PostGIS, Supabase), NoSQL (MongoDB)</li>
                         <li><strong>Data Analysis</strong>: Pandas, Matplotlib, Power BI (basic), Tableau (basic)</li>
                         <li><strong>Project Management</strong>: Git, GitHub, Notion</li>
+                        <li><strong>Microsoft Power Platform (AI Tools)</strong>: Copilot Studio, Power Automate</li>
                         <li><strong>Others</strong>: Prompt Engineering (GPT/Gemini API Integration), Arduino (IoT), LINE bot</li>
                     </ul>
                 </div>
@@ -133,11 +134,20 @@
                 <div class="item">
                     <div class="section-title underline">Projects 📊</div>
                     <ul>
-                        <li><strong>網路服務程式設計 - NTU-COOL 台北陰影路徑規劃</strong>：NTU-COOL 是一個陰影導航網頁應用程式，幫助使用者在台北街道上找到最短且最涼爽（陰影最多）的路徑。
-                            我們使用台北市政府公開的 3D 建物建模資料，根據特定時間的太陽方位進行投影，計算出每條路上的陰影面積，並最佳化路線的距離與陰影路段比例，讓行人在炎熱天氣中選擇較涼爽且不繞路的路徑。
-                            我負責資料庫建置、陰影預計算、印出計算時間log、雲端部屬、做簡報。
-                            <a href="https://youtu.be/B1G-FGSvSJg?si=rjoH9-fQRKv4zuRS" target="_blank">Demo 影片連結</a>
-                            <a href="https://ntu-cooooooool.vercel.app/" target="_blank">NTU-COOL網站連結</a>
+                        <li><strong>資管專題 - coolmap 台北陰影/騎樓/路燈路徑規劃 </strong>
+                            一套結合台北開放資料的路徑規劃與視覺化系統，目標是讓導引不只看距離，也把「當下環境」納入考量，提供更貼近使用情境的路線建議。
+                            白天系統會根據建物幾何與太陽方位（方位角與高度角）做陰影估計，把陰影覆蓋轉成路段權重；雨天則結合騎樓資料，偏好有騎樓遮蔽的走法；夜間會使用路燈資料，讓較明亮、相對更安全的路段在計算時更「便宜」，因此更容易被選進建議路線。
+                            <a href="https://coolmap.tw/" target="_blank">coolmap.tw 網站連結</a>
+                        </li>
+                        <li><strong>系統分析與設計 - solarium 屋頂日光-台灣屋頂太陽能自助評估</strong>
+                            台灣屋頂太陽能自助評估服務。直接在網站上輸入地址，約 5 分鐘即可完成評估，了解屋頂是否適合裝設太陽能、預估能賺多少錢，並下載報告與廠商聯繫。
+                            使用3D 建物模型 — 來自 GlobalBuildingAtlas，用於辨識目標建物、計算屋頂面積與鄰棟陰影。
+                            鄉鎮月均氣候 — 來自 NASA POWER 多年均值，覆蓋全台各鄉鎮十二個月，供結果步驟發電試算與地區分析使用。
+                            地表高程 — 來自內政部 DEM，用於鄰棟有效遮蔽高度與地圖地形。
+                            費率與補助常數 — 依政府公告與產品假設，供參數與結果步驟的成本收益試算。
+                            <a href="https://solar-money.vercel.app/" target="_blank">屋頂日光 網站連結</a>
+                            <a href="https://github.com/b12705030/solar_money" target="_blank">GitHub 連結</a>
+                            <a href="https://solarium-1f74f072.mintlify.app/" target="_blank"> Mintlify 文件 </a>(包含使用指南、開發者指南與互動式 API 參考)
                         </li>
                         <li><strong>資料庫管理 - Promoradar（2025）</strong>：「Promoradar 優惠雷達」是一個整合各大飲料與連鎖品牌優惠資訊的平台，幫助使用者不用到處翻 IG、官網或海報，就能一次掌握近期有哪些買一送一、折扣或限時活動。
                             系統提供日曆與地圖瀏覽、條件篩選與收藏功能，讓使用者可以依時間、地點與品牌快速找到想要的優惠；
